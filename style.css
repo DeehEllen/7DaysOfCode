@@ -1,0 +1,333 @@
+:root {
+  --fonte-base: 'Inter', sans-serif;
+  --main-color-red: #8E2424;
+  --color-base-white: #FFFFFF;
+  --color-Gray-50 : #F9FAFB;
+  --color-Gray-500: #667085;
+  --color-Gray-900: #101828;
+  --color-Gray-200:#EAECF0;
+  --color-Gray-400: #98A2B3;
+  --menu-logo: #3A404E;
+}
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: var(--fonte-base);
+}
+
+body {
+width: 100%;
+height: 100vh;
+}
+
+/* Menu do cabeçalho*/
+header {
+display: flex;
+justify-content: space-around;
+align-items: center;
+margin-top: 1rem;
+}
+
+nav {
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 1rem 2rem;
+}
+
+.links {
+margin: 0 auto;
+}
+
+.links a {
+color: var(--color-Gray-400);
+text-decoration: none;
+margin-right: 2rem;
+}
+
+.sideMenu {
+display: none;
+visibility:hidden;
+}
+
+.textmenu {
+  width: 100px;
+  height: 20px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-size: 10px;
+  line-height: 20px;
+  margin-top: 1.5px;
+  left: 35px;
+  color:#3A404E;
+  
+}
+
+.menu.active {
+right: 0;
+box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+transition: all 0.5s;
+}
+
+.menu {
+display: flex;
+align-items: center;
+margin-left: 4rem;
+}
+
+.menu .links a {
+margin-bottom: 2rem;
+}
+
+.sideMenu img {
+position: relative;
+z-index: 1;
+width: 24px;
+height: 24px;
+cursor: pointer;
+}
+
+/* Botão do menu*/
+.buttons {
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: flex-end;
+margin-left: 6rem;
+}
+
+button {
+padding: 0.8rem 1rem;
+cursor: pointer;
+border: none;
+border-radius: 0.5rem;
+background: none;
+color: var(--color-Gray-500);
+font-size: 0.9rem;
+}
+
+.buttons a  {
+text-decoration: none;
+color: var(--color-base-white);
+}
+
+button.signUp {
+background-color: var(--main-color-red);
+color: #FFF;
+}
+
+/* Destaque sobre nós 'Cabeçalho' .*/
+
+.cabecalho_sobre {
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 6rem 1rem;
+gap: 1rem;
+}
+
+.cabecalho_sobre span {
+  color: var(--main-color-red);
+}
+
+.cabecalho_sobre h1 {
+font-size: 2rem;
+color: var(--Gray-900);
+text-align: center;
+}
+
+.cabecalho_sobre p {  
+color: var(--Gray-500);
+max-width: 50%;
+text-align: center;
+line-height: 1.5rem;
+}
+
+/*Seção de Metricas*/
+
+.metrics {
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+column-gap: 3rem;
+padding: 0 8rem;
+}
+
+.metric {
+display: flex;
+flex-direction: column;
+gap: 0.5rem;
+}
+
+.metric h1 {
+color: var(--main-color-red);
+font-size: 3rem;
+}
+
+.metric span {
+color: var(--color-Gray-500);
+line-height: 140%;
+font-size: 90%;
+}
+
+.metric .metric-title {
+font-weight: 500;
+color: #101828;
+}
+
+/*seção de vagas*/
+
+.talents {
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 0 1rem;
+padding-top: 8rem;
+gap: 1rem;
+}
+
+.talents h2 {
+text-align: center;
+color: var(--color-Gray-900);
+}
+
+.talents span {
+color: var(--main-color-red);
+background: rgba(142, 36, 36, 0.05);
+padding: 0.5rem 1rem;
+border-radius: 1rem;
+}
+
+.talents p {
+text-align: center;
+color: var(--color-Gray-500);
+}
+
+.talents img {
+margin-top: 2rem;
+width: 80%;
+}
+
+/*Seção de vagas abertas*/
+
+.vagas-abertas {
+padding-top: 4rem;
+}
+
+.vagas-abertas span.area-principal {
+display: block;
+max-width: 50%;
+margin: 0 auto;
+margin-top: 2rem;
+margin-bottom: 2rem;
+font-weight: bold;
+color: var(--color-Gray-900);
+}
+
+.vaga {
+border: 1px solid var(--color-Gray-200);
+border-radius: 0.5rem;
+padding: 1rem;
+max-width: 50%;
+margin: 0 auto;
+margin-bottom: 1rem;
+color: var(--color-Gray-900);
+}
+
+.vaga span.titulo-vaga {
+font-weight: 500;
+margin-bottom: 16px;
+}
+
+.vaga .informacoes {
+margin-top: 1rem;
+font-size: 90%;
+color: var(--color-Gray-500);
+display: flex;
+gap: 2rem;
+}
+
+/*Seção Depoimentos*/
+
+.depoimento {
+display: flex;
+flex-direction: column;
+align-items: center;
+max-width: 80%;
+margin: 8rem auto;
+background-color: rgba(195, 25, 25, 0.05);
+padding: 3rem 2rem;
+}
+
+.depoimento span {
+color: var(--main-color-red);
+font-weight: 500;
+text-align: center;
+}
+
+.depoimento img {
+width: 48px;
+}
+
+.depoimento h2 {
+color: var(--color-Gray-900);
+font-weight: 500;
+text-align: center;
+max-width: 70%;
+margin: 2rem 0;
+}
+
+.depoimento span.nome {
+color: var(--main-color-red);
+margin: 0.5rem 0;
+font-weight: 400;
+}
+
+.depoimento span.cargo {
+color: var(--color-Gray-500);
+font-weight: 400;
+}
+
+/*footer do site*/
+
+footer {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+background: var(--color-Gray-50);
+padding: 6rem 1rem;
+gap: 1.5rem;
+text-align: center;
+}
+
+footer h2 {
+color: var(--color-Gray-900);
+}
+
+footer span {
+color: var(--color-Gray-500);
+}
+
+footer form {
+display: flex;
+justify-content: space-between;
+}
+
+footer input {
+outline: none;
+border: 1px solid  #D0D5DD;
+border-radius: 0.5rem;
+padding-left: 1rem;
+width: 12rem;
+margin-right: 1rem;
+}
+
+/* Responsividade */
+
+@media screen and (max-width: 920px) {
+.metrics {
+  padding: 0 4rem;
+}
+}
