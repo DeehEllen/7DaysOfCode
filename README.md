@@ -5,7 +5,7 @@ Challenge proposed by Alura.
 
 ## 📎 Technologies used:  HTML | CSS
 
-#Style guide
+# Style guide
 
 [Project link in figma](https://www.figma.com/file/mm3MLozvUDGhDRTxSLlGL5/7daysOfCode-HTML-CSS?node-id=0%3A9878)
 
